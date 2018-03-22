@@ -1,6 +1,6 @@
 [Unit]
 Description=Setup a secure tunnel to %I
-After=network.target
+After=network-online.target
 
 [Service]
 ExecStart=/usr/bin/ssh -NT -o ServerAliveInterval=60 -o ExitOnForwardFailure=yes %i
