@@ -1,10 +1,12 @@
+# Author: Xida Ren
+# URL: https://github.com/renxida/labtunnel
+
 [Unit]
 Description=Setup a secure tunnel to %I
 After=network-online.target
 
 [Service]
 ExecStart=/usr/bin/ssh -NT -o ServerAliveInterval=60 -o ExitOnForwardFailure=yes %i
-#ExecStart=/usr/bin/ssh -NT -o ServerAliveInterval=60 -o ExitOnForwardFailure=yes -L 57349:localhost:57349 ztower
 
 # Restart every >2 seconds to avoid StartLimitInterval failure
 RestartSec=5
