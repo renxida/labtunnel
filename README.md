@@ -1,6 +1,6 @@
 # SSH Tunnel For SystemD
 
-This systemd unit maintains an SSH tunnel to a computer of your choice. 
+This systemd unit maintains an SSH tunnel to a computer of your choice. No root required.
 
 Running install.sh copies labtunnel@.service to your ~/.config/systemd/user . *Do not use sudo.*
 
@@ -18,3 +18,5 @@ Host [Your tunnel name]
 To start a tunnel, use `systemctl --user start labtunnel@[your tunnel name`.
 
 Other available commands include stop and disable. Also, see `man systemd`, `man systemd.units`, and `man ssh_config`
+
+When you don't want this anymore, run uninstall.sh . After uninstalling, if you don't delete the lines you added to your ssh config, you may still runn ssh [your tunnel name] to access the tunnels manually.
