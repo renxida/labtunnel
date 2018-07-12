@@ -6,6 +6,8 @@ Description=Setup a secure tunnel to %I
 After=network-online.target
 
 [Service]
+# Using ssh-agent example
+#Environment=SSH_AUTH_SOCK=%h/.ssh/ssh-agent.sock
 ExecStart=/usr/bin/ssh -NT -o ServerAliveInterval=60 -o ExitOnForwardFailure=yes %i
 
 # Restart every >2 seconds to avoid StartLimitInterval failure
