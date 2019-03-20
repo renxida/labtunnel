@@ -32,7 +32,7 @@ To start your tunnel, substitute the tunnel name you defined into the following 
 ```systemctl --user start labtunnel@[your tunnel name]```
 
 To set-up autostart, use the same command but replace `start` with `enable`:
-```systemctl --user start labtunnel@[your tunnel name]```
+```systemctl --user enable labtunnel@[your tunnel name]```
 
 See more at `man systemctl`
 
@@ -40,12 +40,12 @@ See more at `man systemctl`
 
 Run `uninstall.sh` from the project directory. The script removes autostart tunnels and the installed systemd template file.
 
-After uninstalling, if you don't delete the lines you added to your ssh config, you may still runn ssh [your tunnel name] to access the tunnels manually.
+After uninstalling, if you don't delete the lines you added to your ssh config, you may still run ssh [your tunnel name] to access the tunnels manually.
 
 # Source
 This project is based off drmalex07's systemd ssh tunneler at https://gist.github.com/drmalex07/c0f9304deea566842490.
 
 My improvements include:
-- No priviledges required: everything is installed in ~/.config/systemd/user
+- No privileges required: everything is installed in ~/.config/systemd/user
 - Install/uninstall scripts
-- Usses ssh_config: can define all sorts of ssh connections, not just local tunnels
+- Uses ssh_config: can define all sorts of ssh connections, not just local tunnels
