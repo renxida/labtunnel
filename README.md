@@ -38,14 +38,14 @@ See more at `man systemctl`
 
 # Uninstalling
 
-Run `uninstall.sh` from the project directory. The script removes autostart tunnels and the installed systemd template file.
+Run `uninstall.sh` from the project directory. The script disable/removes autostart tunnels and the installed systemd template file.
 
-After uninstalling, if you don't delete the lines you added to your ssh config, you may still runn ssh [your tunnel name] to access the tunnels manually.
+After uninstalling, if you don't delete the lines you added to your ssh config, you may still run ssh [your tunnel name] to access the tunnels manually.
 
 # Source
 This project is based off drmalex07's systemd ssh tunneler at https://gist.github.com/drmalex07/c0f9304deea566842490.
 
 My improvements include:
-- No priviledges required: everything is installed in ~/.config/systemd/user
+- No priviledges required: everything is installed in ~/.config/systemd/user (your user's personal systemd-related files)
 - Install/uninstall scripts
 - Usses ssh_config: can define all sorts of ssh connections, not just local tunnels
