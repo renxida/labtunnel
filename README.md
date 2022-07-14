@@ -38,7 +38,7 @@ See more at `man systemctl`
 
 # Uninstalling
 
-Run `uninstall.sh` from the project directory. The script removes autostart tunnels and the installed systemd template file.
+Run `uninstall.sh` from the project directory. The script disable/removes autostart tunnels and the installed systemd template file.
 
 After uninstalling, if you don't delete the lines you added to your ssh config, you may still run ssh [your tunnel name] to access the tunnels manually.
 
